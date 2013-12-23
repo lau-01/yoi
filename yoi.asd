@@ -10,13 +10,18 @@
                #:ucw
                #:iolib
                #:cl-ppcre
-               #:parenscript)
+               #:parenscript
+	       #:ironclad
+	       #:cl-smtp
+	       #:yaclml)
   :components ((:module :src 
 		:components ((:file "package")
 			     (:file "symbol-macro" :depends-on ("package"))
 			     (:file "blog-func-lib" :depends-on ("package"))
 			     (:file "web-server" :depends-on ("package"))
-			     (:file "db-connection-disconnection" :depends-on ("package"))
+			     (:file "with-database")
+			     (:file "encrypt-passwords")
+			     (:file "user-registration")
 			     (:file "blog")
 			     (:file "menu-componente")
 			     (:file "agregar-post")

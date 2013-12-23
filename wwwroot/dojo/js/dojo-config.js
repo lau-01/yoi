@@ -1,0 +1,1 @@
+dojoConfig = {parseOnLoad: true};

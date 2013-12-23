@@ -1,0 +1,470 @@
+html, body
+{
+	margin: 0px;
+	padding: 0;
+	background-color: #fff;
+	
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-LightItalic";
+    src: url(../fonts/Open_Sans/OpenSans-LightItalic.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Semibold";
+    src: url(../fonts/Open_Sans/OpenSans-Semibold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#wrapper-registro
+{
+	width: 800px;	
+	height: 832px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow:0px 0px 5px #999999;
+	}
+	
+#wrapper-registro2
+{
+	width: 800px;	
+	height: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow:0px 0px 5px #999999;
+	}
+	
+#header2
+{
+	width: 800px;	
+	height: 70px;
+	float: left;
+	border-bottom: 3px solid #2aa7d3;
+	}
+	
+#header2-logo
+{
+	width: 300px;	
+	height: 70px;
+	float: left;
+	margin-left: 40px;
+	background-image: url(../img/logo2.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	}
+	
+#header2-texto
+{
+	width: 400px;	
+	height: 80px;
+	float: right;
+	font-family: OpenSans-LightItalic;
+	font-size: 25px;
+	color: gray;
+	text-align: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	}
+
+#main
+{
+	width: 750px;
+	height: 665px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	}
+	
+#main2
+{
+	width: 750px;	
+	height: 417px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	}
+	
+#encabezado
+{
+	width: 710px;	
+	height: 20px;
+	float: left;
+	font-family: OpenSans-Regular;
+	font-size: 16px;
+	margin-left: 20px;
+  margin-top: 15px;
+	border-bottom: 1px solid gainsboro;
+	}
+	
+#encabezado2
+{
+	width: 710px;	
+	height: 20px;
+	float: left;
+	color: #f6af19;
+	font-family: OpenSans-SemiBold;
+	font-size: 19px;
+	margin-left: 20px;
+	margin-top: 20px;
+	}
+	
+#encabezado3
+{
+	width: 710px;	
+	height: 20px;
+	float: left;
+	font-family: OpenSans-Regular;
+	font-size: 16px;
+	margin-left: 20px;
+	margin-top: 20px;
+	}
+	
+#texto 
+{
+	width: 650px;	
+	height: 20px;
+	float: left;
+	color: gray;
+	font-family: OpenSans-Regular;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-top: 10px;
+	}
+
+#div-genre { 
+height: 35px;
+
+float: left;
+}
+#head-genre
+{
+  height: 20px;
+ float: left;
+  color: gray;
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  margin-left: 20px;
+  
+}
+	
+#boton
+{
+ 
+  width: 710px;	/*175*/
+  height: 30px;
+  float: left;
+  color: gray;
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+	}
+	
+#boton2
+{
+	width: 150px;	
+	height: 20px;
+	float: left;
+	color: gray;
+	font-family: OpenSans-Regular;
+	font-size: 15px;
+	margin-top: 20px;
+	}
+	
+#texto2 
+{
+	width: 650px;	
+	height: 20px;
+	float: left;
+	color: gray;
+	font-family: OpenSans-Regular;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-top: 10px;
+	}
+	
+#espacio
+{
+	width: 650px;	
+	height: 20px;
+	float: left;
+	color: gray;
+	margin-left: 20px;
+	}
+	
+#div-squestion { 
+ }	
+
+.squestion { 
+  margin-left: 20px;
+  margin-top: 2px;
+  padding-left:5px;
+  padding-top:3px;
+  padding-bottom:5px;
+  border: 1px solid #828282;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 30px;
+  width: 420px;
+ }
+
+#div-sanswer
+{
+  width: 710px;
+  height: 35px;
+  margin-top: 10px; 
+}
+#div-name { 
+  height: 35px;
+  float: left;
+ }
+.name
+{
+  margin-left: 20px;
+  margin-top: 2px;
+  padding-left:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border: 1px solid #828282;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 19px;
+  width: 120px;
+  float: left;
+  clear: left;
+}
+
+.input
+{
+  margin-left: 20px;
+  margin-top: 2px;
+  padding-left:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border: 1px solid #828282;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 19px;
+  width: 414px;
+  float: left;
+  clear: left;
+}
+
+.input:focus  
+{ 
+  padding-left:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border: 1px solid #2aa7d3;
+  border-radius:4px;
+  font-family:OpenSans-Regular;
+  font-size:14px; 
+  height:19px;
+  width:414px;
+  float:left;
+  clear:left;
+  box-shadow:1px 1px 2px #49ABE2;
+}
+
+.input-error
+{
+  margin-left: 20px;
+  padding-left:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border: 1px solid #EFA003;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 19px;
+  width: 414px;
+  float: left;
+  clear: left;
+  box-shadow: 1px 1px 2px #EFA003;
+}
+
+.input-error:focus  
+{ 
+  margin-left: 20px;
+  padding-left:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border: 1px solid #EFA003;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 19px;
+  width: 414px;
+  float: left;
+  clear: left;
+  box-shadow: 1px 1px 2px #EFA003;
+}
+	
+.select-opicones
+{
+  border:1px solid #828282;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 25px;
+  width: 250px;
+}
+	
+.select-opicones:focus
+{
+  border:1px solid #2aa7d3;
+  border-radius:4px;
+  font-family: OpenSans-Regular;
+  font-size:14px; 
+  height: 25px;
+  width: 250px;
+  box-shadow:1px 1px 2px #49ABE2;
+}
+	
+.boton1 {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffd769), color-stop(1, #f9ae00) );
+  background:-moz-linear-gradient( center top, #ffd769 5%, #f9ae00 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd769', endColorstr='#f9ae00');
+  background-color:#ffd769;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #c29218;
+  display:inline-block;
+  color:#ad6e00;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #fcee8f;
+}
+
+.boton1:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9ae00), color-stop(1, #ffd769) );
+	background:-moz-linear-gradient( center top, #f9ae00 5%, #ffd769 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9ae00', endColorstr='#ffd769');
+	background-color:#fff;
+}
+.boton1:active {
+	position:relative;
+	top:1px;
+}
+
+.boton2 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #52c4f1), color-stop(1, #0086c0) );
+	background:-moz-linear-gradient( center top, #52c4f1 5%, #0086c0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#52c4f1', endColorstr='#0086c0');
+	background-color:#52c4f1;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #277ac2;
+	display:inline-block;
+	color:#223e69;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #c8e9fa;
+}
+
+.boton2:hover 
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0086c0), color-stop(1, #52c4f1) );
+	background:-moz-linear-gradient( center top, #0086c0 5%, #52c4f1 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0086c0', endColorstr='#52c4f1');
+	background-color:#0086c0;
+}
+
+.boton2:active 
+{
+	position:relative;
+	top:1px;
+}
+
+#footer
+{
+	width: 800px;	
+	height: 100px;
+	float: left;
+	clear: left;
+	background-color: gainsboro;
+}
+
+#footer-texto
+{	
+	height: 30px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 40px;
+	
+}
+
+.footer-texto
+{
+	font-family: OpenSans-Regular;
+	color: gray;
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.footer-texto:hover
+{
+	font-family: OpenSans-Regular;
+	color: #fff;
+	float: left;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	

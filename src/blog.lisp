@@ -40,7 +40,7 @@
    ;; Se le pone un titulo a la pagina.
    :title "My Blog"
    ;; Se incluye la ruta del archivo "blog.css" de la hoja de estilo.
-   :stylesheet '("static/blog.css")
+   :stylesheet '("static/css-layout1/fixed-blog-blue.css")
    ;; Se incluye la ruta del archivo "parenscript.js" para las funciones de javascript.
    :javascript
    '((:src  "static/parenscript.js"))))
