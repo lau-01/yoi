@@ -11,9 +11,9 @@
    (post-name :initform 0 
 	      :accessor  post-name 
 	      :initarg :post-name)
-   (post-author :initform 0
+   #|(post-author :initform 0
 		:accessor post-author
-		:initarg :post-author )
+		:initarg :post-author )|#
    (post-abstract :initform 0 
 		  :accessor post-abstract
 		  :initarg :post-abstract )
@@ -57,12 +57,12 @@
 						  :value (post-name s)
 						  :class "inputaddpost")
 				      (<:br)
-				      (<:as-html "Author : ")(<:&nbsp) (<:&nbsp) (<:&nbsp)  (<:&nbsp)
+				    #|  (<:as-html "Author : ")(<:&nbsp) (<:&nbsp) (<:&nbsp)  (<:&nbsp)
 				      (<ucw:input :type "text" 
 						  :name "editauthor"
 						  :accessor edit-author 
 						  :value (post-author s)
-						  :class  "inputaddpost") 
+						  :class  "inputaddpost") |#
 				      (<:br) 
 				      (<:as-html "Summary : ")
 				      (<ucw:textarea :rows "5" 
@@ -84,7 +84,7 @@
 						    :value "Publish >>"
 						    :onmouseover (ps (submit_mouseover "idsavepost"))
 						    :onmouseout  (ps (submit_mouseout "idsavepost"))
-						    :action (edit-post-update (tpost-id s) edit-category edit-title edit-author edit-summary edit-post ))
+						    :action (edit-post-update (tpost-id s) edit-category edit-title edit-summary edit-post ))
 				      
 				      (<ucw:submit  :id "idepreviewpost"
 						    :class "inputaddpost"

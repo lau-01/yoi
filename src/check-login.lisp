@@ -1,12 +1,12 @@
 (in-package #:ws.ikki.yoi)
 
-;;; Funcion que checa las credenciasles en la base de datos
+;;; function that verifies the user data in the database
 
 (defaction check-login (user password)
   (if (find-user user password)
       (progn
-	;; Si el resultado de la funcion find-user es verdadero se le asigna una sesion al usuario y se llama al componente "main-component"
+	;; if the data is correct the access to the system is allowed
 	(setf $usersession user)
 	(call-as-window 'blog-window))
-      ;; Si el resultado de la funcion find-user es falso  se llama al componente "login-post"
+      ;;if the data is incorrect calls the same component "login-post"
       (call 'login-post)))

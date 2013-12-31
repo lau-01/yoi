@@ -115,7 +115,7 @@
 (defcomponent login (standard-window-component )
   ()
   (:default-initargs 
-   :body (make-instance 'login-post)
+   :body (make-instance 'login-window)
    :title "Login "
    :stylesh  *style*
    :javascript

@@ -68,7 +68,7 @@
 
 ;;;  Funcion que realiza el preview del post al editar un post
 
-(defun preview-edit-show-post   (topic-id xcreation-time post-name post-author post-abstract post-views post post-id)
+(defun preview-edit-show-post   (topic-id xcreation-time post-name post-abstract post-views post post-id)
   (<ucw:form  
    :function (constantly t)
    (<:div :id "post1"
@@ -83,8 +83,8 @@
 	  (<:p 
 	   (<:as-is (format nil "~A" post  )))
 	  ;; En este parrafo se pone el  autor
-	  (<:p :class "postauthor"
-	       (<:as-html (format nil "Author: ~A" post-author)))
+	 #| (<:p :class "postauthor"
+	       (<:as-html (format nil "Author: ~A" post-author)))|#
 	  ;; En este parrafo se pone la fecha de creacion
 	  (<:p :class "postdate"
 	       (<:as-html (format nil "Creation time: ~A" xcreation-time )))
@@ -102,7 +102,7 @@
 			       :action (edit-post-update post-id 
 							 topic-id
 							 post-name 
-							 post-author
+							 ; post-author
 							 post-abstract
 							 post ))
 		 
@@ -112,7 +112,14 @@
 			       :value "<< Correct"
 			       :onmouseover (ps (submit_mouseover "idaddpost"))
 			       :onmouseout  (ps (submit_mouseout "idaddpost"))
-			       :action (xyxy))))))
+			       :action (add-post topic-id
+						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
+						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
+						    post-name
+						    (get-user-id $usersession)
+						    post-abstract
+						    1
+						    post))))))
 
 
 

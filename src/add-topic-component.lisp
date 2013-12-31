@@ -47,4 +47,4 @@
 								:class "inputaddtopic"
 								:style "cursor:pointer"                               
 								;; Esta accion  envia la informacion para que se almacene en la base de datos
-								:action (add-topic-db topic-name topic-description image-path)))))))))))))
+								:action (add-topic-db topic-name topic-description image-path (get-user-id $usersession))))))))))))))

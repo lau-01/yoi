@@ -1,6 +1,9 @@
 (in-package #:ws.ikki.yoi)
 
+;;;; access to the system
 
+
+;;;component type window with which users will have access to the system
 (defcomponent login-window (standard-window-component )
   ()
   (:default-initargs 
@@ -11,11 +14,15 @@
    '((:src  "static/dojo/js/parenscript.js"))
    :body (make-instance 'login-post)))
 
+
+
 (defentry-point "login.ucw" (:application *blog*
 			     :class regexp-dispatcher)
 		()
   (call-as-window 'login-window ))
 
+
+;;;component in which the user placed their name and password to access the system
 (defcomponent login-post () 
   ())
 
@@ -47,4 +54,5 @@
 				 (<:div :id "wrap-botton"
 					(<ucw:submit :value "Iniciar sesión" 
 						     :class "blogin"
+						     ;a hashing and encryption to the password entered by the user to match the one stored in the database is applied.
 						     :action (check-login user (hash-password (encrypt-password pwd))))))))))))

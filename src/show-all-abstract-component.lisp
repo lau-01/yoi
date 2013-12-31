@@ -16,4 +16,4 @@
 									   'update_time
 								   :from 'topic_posts ) (:desc 'update_time) ) 5 ) 
 				    (idpost titulo  resumen autor fecha)
-				  (show-abstract idpost titulo resumen autor (my-date fecha)))))))) ; Se realiza la desconexion de la base de datos
+				  (show-abstract idpost titulo resumen (car (get-user-name autor))(my-date fecha)))))))) ; Se realiza la desconexion de la base de datos

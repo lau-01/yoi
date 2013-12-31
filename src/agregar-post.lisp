@@ -11,7 +11,7 @@
 ;; Definicion de las variables locales
   (let ((category "")
 	(title "2")
-	(author "")
+	;	(author "")
 	(summary "")
 	(post ""))
     (<:div :id "wrapper"
@@ -46,12 +46,12 @@
 							:value ""
 							:class  "inputaddpost") 
 					    (<:br)
-					    (<:as-html "Author : ")(<:&nbsp) (<:&nbsp) (<:&nbsp)  (<:&nbsp)
+					  #|  (<:as-html "Author : ")(<:&nbsp) (<:&nbsp) (<:&nbsp)  (<:&nbsp)
 					    (<ucw:input :type "text"
 							:name "author"
 							:accessor author
 							:value ""
-							:class  "inputaddpost") 
+							:class  "inputaddpost") |#
 					    (<:br) 
 					    (<:as-html "Summary : ")
 					    (<ucw:textarea :rows "5"
@@ -79,10 +79,10 @@
 									    (my-date (get-universal-time)) ; Se obtine la hora actual en formato aaaa/mm/dd
 									    (my-date (get-universal-time)) ; Se obtine la hora actual en formato aaaa/mm/dd
 									    title
-									    author
-									       summary
-									       1
-									       post))
+									    (get-user-id $usersession)
+									    summary
+									    1
+									    post))
 					    (<:&nbsp)
 					    (<ucw:submit  :id "idpreviewpost"
 							  :class "inputaddpost"
@@ -96,9 +96,9 @@
 												 :preview-add-post-id nil
 												 :preview-add-topic-id category
 												 :preview-add-post-name title
-												 :preview-add-post-author author
+					;			:preview-add-post-author (get-user-id $usersession)		
 												 :preview-add-post-abstract summary
-												 :preview-add-post post
+											 :preview-add-post post
 												 :preview-add-creation-time  (get-universal-time))))))))))))))
 #|
 Se define un componente que contiene el formulario para agregar un nuevo post, es decir contiene campos como:

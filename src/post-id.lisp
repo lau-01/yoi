@@ -25,7 +25,7 @@
 				    :where (:= 'tpost_id (showpost a)))
 					   (idpost titulo  contenido autor fecha)
 					 ;; La informacion encontrada en la base de datos se envia a la funcion show-post
-					 (show-post idpost titulo contenido autor (my-date fecha)))))))))
+					 (show-post idpost titulo contenido (car (get-user-name autor)) (my-date fecha)))))))))
 
 
 
@@ -47,5 +47,5 @@
 				    :where (:= 'tpost_id (id)))
 			    (idpost titulo  contenido autor fecha)
 ;; La informacion encontrada en la base de datos se envia a la funcion show-post
-			  (show-post idpost titulo contenido autor (my-date fecha)))))))))
+			  (show-post idpost titulo contenido (car (get-user-name autor)) (my-date fecha)))))))))
 

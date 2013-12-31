@@ -21,4 +21,4 @@
 						      :from 'topic_posts
 						      :where (:= 'topic_id (topic-id sby))) 
 					   (idpost titulo  resumen autor fecha)
-					 (show-abstract idpost titulo resumen autor (my-date fecha)))))))))
+					 (show-abstract idpost titulo resumen (car (get-user-name autor)) (my-date fecha)))))))))

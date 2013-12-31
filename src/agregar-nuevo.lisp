@@ -19,8 +19,8 @@
 	   (<:p 
 		(<:as-is (format nil "~A" post  ))))
 ;; En este parrafo se pone el autor del post 
-	  (<:p :class "postauthor"
-	       (<:as-html (format nil "Author: ~A" post-author)))
+	 ;	  (<:p :class "postauthor"
+	  ;	  (<:as-html (format nil "Author: ~A" post-author)))
 ;; En este parrafo se pone la fecha de creacion del post
 	  (<:p :class "postdate"
 	       (<:as-html (format nil "Creation time: ~A" xcreation-time )))
@@ -39,7 +39,7 @@
 						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
 						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
 						    post-name
-						    post-author
+						    (get-user-id $usersession)
 						    post-abstract
 						    1
 						    post))
@@ -51,5 +51,11 @@
 			       :onmouseover (ps (submit_mouseover "idaddpost"))
 			       :onmouseout  (ps (submit_mouseout "idaddpost"))
 			       :onclick (ps (goBack))
-			       :action (sss)
-			       )))))
+			       :action (add-post topic-id
+						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
+						    (my-date  (get-universal-time)) ; Se obtiene la fecha actual en formaro aaaa/mm/dd h:m:s
+						    post-name
+						    (get-user-id $usersession)
+						    post-abstract
+						    1
+						    post))))))

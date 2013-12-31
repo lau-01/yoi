@@ -234,40 +234,51 @@ function valida_alta_name_presskey (e)
 
 //------------------------------------------------------------------->
 
-function alta_usuario1 (idusername,idpassword,idconfirmpassword,idemail,idsquestion,idanswer)
+function alta_usuario1 (idemail,idsquestion,idanswer,idpassword,idconfirmpassword)
 {
-    checar_username = valida_alta_username (idusername);
-    checar_password = valida_alta_password (idpassword);
-    confirm_password = valida_alta_password (idconfirmpassword);
-    checar_email = validate_email_onblur (idemail);
-    pwd = document.getElementById(idpassword);
-    pwd1 = document.getElementById(idconfirmpassword);
-    squestion = document.getElementById(idsquestion);
-    answer = document.getElementById(idanswer);
-
+	// check the mail
+   var checar_email = validate_email_onblur (idemail);
+   // check the password
+	var checar_password = valida_alta_password (idpassword);
+	// check the password
+   var confirm_password = valida_alta_password (idconfirmpassword);
+   // get the reference 
+   var squestion = document.getElementById(idsquestion);
+   // get the reference
+   var answer = document.getElementById(idanswer);
+   // get the reference
+   var pwd = document.getElementById(idpassword);
+   // get the reference
+   var pwd1 = document.getElementById(idconfirmpassword);
+   // set default value
+    var status =true;
+  
+    // set the class by defualt, this mean that the fields are correct
+    answer.className="input";
     pwd.className="input";
     pwd1.className="input";
-    answer.className="input";
-
-    if ((checar_username == true) && (checar_password == true) && (checar_email == true) && (confirm_password ==true) && (pwd.value == pwd1.value) && (squestion.selectedIndex != 0) && (answer.value != ""))
+   // here we valitate all fields
+    if ((checar_email == true) && (squestion.selectedIndex != 0) && (answer.value != "") && (checar_password == true)  && (confirm_password ==true) && (pwd.value == pwd1.value))
     {
-    	return true;
+    	// the form was validate
+    	status=true;
     }
     else
     {
-       if  ((pwd.value != pwd1.value) || (pwd.value.length < 8) || (pwd1.value.length < 8))
-            {    
-       	      pwd.className="input-error";
-	      pwd1.className="input-error";
-            }
-
-      if ((answer.value == "") || (squestion.selectedIndex == 0))
+    	if ((answer.value == "") || (squestion.selectedIndex == 0))
 	     {
     	      answer.className="input-error";
 	      }
-	return false;
-	
+       if  ((pwd.value != pwd1.value) || (pwd.value.length < 8) || (pwd1.value.length < 8))
+            {    
+       	      pwd.className="input-error";
+	            pwd1.className="input-error";
+            }
+		
+    status =false;
     }
+	// finally we return the status
+     	return status;
 }
 
 //------------------------------------------------------------------->

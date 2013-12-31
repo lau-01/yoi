@@ -13,9 +13,9 @@
    (preview-edit-post-name :initform ""
 		      :accessor preview-edit-post-name
 		      :initarg :preview-edit-post-name)
-   (preview-edit-post-author :initform ""
+  #| (preview-edit-post-author :initform ""
 			:accessor preview-edit-post-author   
-			:initarg :preview-edit-post-author)
+			:initarg :preview-edit-post-author)|#
    (preview-edit-post-abstract :initform ""
 			  :accessor preview-edit-post-abstract
 			  :initarg :preview-edit-post-abstract)
@@ -39,7 +39,7 @@
 			( preview-edit-show-post (preview-edit-topic-id pedit)
 						 (my-date (preview-edit-creation-time pedit))
 						 (preview-edit-post-name pedit)
-						 (preview-edit-post-author pedit)
+						; (preview-edit-post-author pedit)
 						 (preview-edit-post-abstract pedit)
 						 1
 						 (preview-edit-post pedit)
